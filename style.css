@@ -1,0 +1,131 @@
+html{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+body{
+    background-color: #DFE5F0;    
+}
+
+table{
+    table-layout: fixed;    
+    max-width: 1440px;
+    margin:auto;
+    border-collapse: collapse;
+    border-style: hidden;
+    color: #020811;
+}
+
+th,
+td,
+tr{
+    text-align: left;
+}
+
+th{
+    color: rgba(2, 8, 17, 0.60);
+    font-weight: 400;
+    height: 36px;
+}
+
+th:nth-child(1){
+    width: 264px;
+    padding-left: 16px;
+}
+
+th:nth-child(2){
+    width: 228px;
+}
+
+th:nth-child(3){
+    width: 421px;
+}
+
+th:nth-child(4), th:nth-child(5){
+    width: 176px;
+}
+
+th:nth-child(6){
+    width: 176px;
+    padding-right: 16px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FDFDFD;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #E8F0FF ;
+}
+
+tbody tr{
+    height: 72px;
+    padding-top: 8px;
+    padding-bottom: 8px;     
+  }
+
+td:not(:first-child), td:not(:last-child){
+    padding-right: 32px;
+}
+
+td:first-child{
+    padding-left: 16px;
+}
+
+td:last-child{
+    padding-right: 16px;
+}
+
+td .status{
+    width: 232px;
+    height: 26px;
+    background: #FFD6D6;
+    border-radius: 24px;
+    position: relative;
+}
+
+td .status::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 21, 21, 0.65);
+    margin: 4px;
+}
+
+td .time{
+    content: "21.11.2024 12:46";
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+td .personal-color{
+    width: 20px;
+    height: 20px;   
+    background: #FFC935;
+    border-radius: 4px;
+    float: left; 
+    box-sizing: border-box;
+    margin-right: 10px;   
+}
+
+td .personal-status{
+    width: 96px;
+    height: 16px;
+    border-radius: 8px;
+    background: rgba(186, 186, 186, 0.24);
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 5px;    
+}
+
+td .personal-status::after{
+    content: "Не назначен";
+    position: absolute;
+    font-size: 12px;
+    padding-left: 11px;    
+}
