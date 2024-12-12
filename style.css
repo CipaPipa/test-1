@@ -83,6 +83,14 @@ td:last-child{
     padding-right: 16px;
 }
 
+select {
+    width: 220px;
+    height: 20px;
+    background-color: #DFE5F0;
+    color: rgba(2, 8, 17, 0.60);
+    border: none;
+} 
+
 .status{
     display: flex;
     padding: 4px;
@@ -126,15 +134,14 @@ td .time{
 
 .user{
     display: flex;
-    align-items:center;      
-    
+    align-items:center;    
 }   
 
 .square{
     width: 20px;
     height: 20px;   
-    border-radius: 4px; 
-
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .square--yellow{
@@ -151,6 +158,10 @@ td .time{
 
 .square--brown{
     background: #5E360F;
+}
+
+.square--pink{
+    background: #DC31E5;
 }
 
 .user_name{

@@ -18,7 +18,19 @@
       <thead>
         <tr>
           <th>Дата создания | Крайний срок</th>
-          <th>Исполнитель</th>
+          <th>
+            <form>
+                <label for="user-select"></label>                
+                    <select name="user" id="user-select">
+                        <option selected disabled> Исполнитель</option>
+                        <option value="bogdanovskiy">Богдановский Денис Сергеевич</option>
+                        <option value="group">Группа системного администрирования</option>
+                        <option value="gerasimenko">Герасименко Дмитрий Сергеевич</option>
+                        <option value="pushkin">Пушкин Александр Сергеевич</option>
+                        <option value="nevazhnov">Неважнов Йожин Александрович</option>
+                    </select>          
+             </form>
+          </th>
           <th>Наименование | Описание</th>
           <th>Номер</th>
           <th>Инициатор</th>
@@ -150,7 +162,12 @@
         </tr>
         <tr>
             <td>21.11.2024 12:46</td>
-            <td>Неважнов Йожин Александрович</td>
+            <td>
+                <div class="user">
+                <div class="square square--pink"></div>                
+                <div class="user_name">Неважнов Йожин Александрович</div>
+            </div>               
+            </td>
             <td>есть дата создания, есть крайний срок заявки, есть два счетчика, щас подниму значение. первый светофор с даты создания заявки до 7 дней...</td>
             <td>Запрос ПА-182923</td>
             <td>Герасименко Дмитрий Сергеевич</td>
