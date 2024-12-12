@@ -1,170 +1,168 @@
-html{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 
-body{
-    background-color: #DFE5F0;    
+body {
+  background-color: #dfe5f0;
 }
 
-table{
-    table-layout: fixed;    
-    max-width: 1440px;
-    margin:auto;
-    border-collapse: collapse;
-    border-style: hidden;
-    color: #020811;
+table {
+  table-layout: fixed;
+  max-width: 1440px;
+  margin: auto;
+  border-collapse: collapse;
+  border-style: hidden;
+  color: #020811;
 }
 
 th,
 td,
-tr{
-    text-align: left;
-    vertical-align: top;
+tr {
+  text-align: left;
+  vertical-align: top;
 }
 
-th{
-    height: 36px;
-    color: rgba(2, 8, 17, 0.60);
-    font-weight: 400;   
+th {
+  height: 36px;
+  color: rgba(2, 8, 17, 0.6);
+  font-weight: 400;
 }
 
-th:nth-child(1){
-    width: 264px;
-    padding-left: 16px;
+th:nth-child(1) {
+  width: 264px;
+  padding-left: 16px;
 }
 
-th:nth-child(2){
-    width: 228px;
+th:nth-child(2) {
+  width: 228px;
 }
 
-th:nth-child(3){
-    width: 421px;
+th:nth-child(3) {
+  width: 421px;
 }
 
-th:nth-child(4), th:nth-child(5){
-    width: 176px;
+th:nth-child(4),
+th:nth-child(5) {
+  width: 176px;
 }
 
-th:nth-child(6){
-    width: 176px;
-    padding-right: 16px;
+th:nth-child(6) {
+  width: 176px;
+  padding-right: 16px;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #FDFDFD;
+  background-color: #fdfdfd;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #E8F0FF;
+  background-color: #e8f0ff;
 }
 
-tbody tr{
-    height: 72px;       
+tbody tr {
+  height: 72px;
 }
 
-td{
-    padding-top: 8px;
-    padding-bottom: 8px; 
+td {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-td:not(:first-child), td:not(:last-child){
-    padding-right: 32px;
+td:not(:first-child),
+td:not(:last-child) {
+  padding-right: 32px;
 }
 
-td:first-child{
-    padding-left: 16px;
+td:first-child {
+  padding-left: 16px;
 }
 
-td:last-child{
-    padding-right: 16px;
+td:last-child {
+  padding-right: 16px;
 }
 
 select {
-    width: 220px;
-    height: 20px;
-    background-color: #DFE5F0;
-    color: rgba(2, 8, 17, 0.60);
-    border: none;
-} 
-
-.status{
-    display: flex;
-    padding: 4px;
-    align-items: center;
-    gap: 10px;
-    width: 232px;    
-    border-radius: 24px;        
+  width: 220px;
+  height: 20px;
+  background-color: #dfe5f0;
+  color: rgba(2, 8, 17, 0.6);
+  border: none;
 }
 
-.status--green{
-    background: #D9FFE9;
-}
-.status--red{
-    background: #FFD6D6;
-
-}
-.status--orange{
-    background: #FFF6DA;
+.status {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  gap: 10px;
+  width: 232px;
+  border-radius: 24px;
 }
 
-.status__circle{
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+.status--green {
+  background: #d9ffe9;
+}
+.status--red {
+  background: #ffd6d6;
+}
+.status--orange {
+  background: #fff6da;
 }
 
-.status--orange .status__circle{    
-    background: var(--surface-caution-secondary, #F2B918);
-}
-.status--green .status__circle{    
-    background: rgba(20, 203, 102, 0.40);
-}
-.status--red .status__circle{    
-    background:rgba(255, 21, 21, 0.65);
+.status__circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 }
 
-td .time{    
-    margin-left: 16px;
-    margin-top: 10px;
+.status--orange .status__circle {
+  background: var(--surface-caution-secondary, #f2b918);
+}
+.status--green .status__circle {
+  background: rgba(20, 203, 102, 0.4);
+}
+.status--red .status__circle {
+  background: rgba(255, 21, 21, 0.65);
 }
 
-.user{
-    display: flex;
-    align-items:center;    
-}   
-
-.square{
-    width: 20px;
-    height: 20px;   
-    border-radius: 4px;
-    flex-shrink: 0;
+td .time {
+  margin-left: 16px;
+  margin-top: 10px;
 }
 
-.square--yellow{
-    background: #FFC935;
+.user {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-.square--green{
-    background: #2D8D20;
+.user__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  border: #020811;
 }
 
-.square--blue{
-    background: #2551E0;
+.user__icon--yellow {
+  background: #ffc935;
 }
 
-.square--brown{
-    background: #5E360F;
+.user__icon--green {
+  background: #2d8d20;
 }
 
-.square--pink{
-    background: #DC31E5;
+.user__icon--blue {
+  background: #2551e0;
 }
 
-.user_name{
-   padding: 10px;
+.user__icon--brown {
+  background: #5e360f;
 }
 
+.user__icon--pink {
+  background: #dc31e5;
+}
