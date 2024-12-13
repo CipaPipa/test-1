@@ -165,3 +165,14 @@ td .time {
 .user__icon--pink {
   background: #dc31e5;
 }
+
+.created {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.created__sort {
+  display: flex;
+  align-items: center;
+}
