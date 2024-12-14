@@ -87,32 +87,32 @@ export default {
   methods: {
     loadTasks() {
       this.lastUpdateTime = new Date().toLocaleDateString('ru-RU', { hour: '2-digit', minute: '2-digit', second: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
-      if (localStorage.getItem('tasks')) {
-        this.tasks = JSON.parse(localStorage.getItem('tasks'));
-        const usersSet = new Set();
-        this.tasks.forEach((task) => {
-          task.visible = true;
-          usersSet.add(task['ТекущийИсполнитель']);
-        });
-        this.users = Array.from(usersSet);
-        this.generateColors();
-      } else {
-        if (!this.tasks.length) {
-          axios.get("http://internal.pa.local/itil_test/zayavki.php").then((response) => {
-            this.tasks = response.data;
-            this.sortByDate(false);
-            const usersSet = new Set();
-            this.tasks.forEach((task) => {
-              task.visible = true;
-              usersSet.add(task['ТекущийИсполнитель']);
-            });
-            this.users = Array.from(usersSet);
-            this.generateColors();
-
-            localStorage.setItem('tasks', JSON.stringify(this.tasks));
+      // if (localStorage.getItem('tasks')) {
+      //   this.tasks = JSON.parse(localStorage.getItem('tasks'));
+      //   const usersSet = new Set();
+      //   this.tasks.forEach((task) => {
+      //     task.visible = true;
+      //     usersSet.add(task['ТекущийИсполнитель']);
+      //   });
+      //   this.users = Array.from(usersSet);
+      //   this.generateColors();
+      // } else {
+      if (!this.tasks.length) {
+        axios.get("http://internal.pa.local/itil_test/zayavki.php").then((response) => {
+          this.tasks = response.data;
+          this.sortByDate(false);
+          const usersSet = new Set();
+          this.tasks.forEach((task) => {
+            task.visible = true;
+            usersSet.add(task['ТекущийИсполнитель']);
           });
-        }
+          this.users = Array.from(usersSet);
+          this.generateColors();
+
+          localStorage.setItem('tasks', JSON.stringify(this.tasks));
+        });
       }
+      // }
       console.log(this.users);
       console.log(this.tasks);
     },
